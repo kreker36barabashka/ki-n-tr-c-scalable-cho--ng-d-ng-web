@@ -22,4 +22,4 @@ services:
 
 networks:
   app-network:
-    driver: bridge  # Use bridge network driver
+    driver: bridge  # Use bridge network driver to enable communication between services
