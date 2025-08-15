@@ -5,7 +5,7 @@ services:
     ports:
       - '3000:3000'  # Map port 3000 on the host to port 3000 on the web service
     depends_on:
-      - mongo  # Ensure mongo service is started before web service
+      - mongo  # Ensure mongo service is started before the web service
     networks:
       app-network:
         aliases:
@@ -24,4 +24,4 @@ networks:
   app-network:
     driver: bridge  # Use bridge network driver to enable communication between services
     # This network allows services to communicate with each other using the specified aliases
-    # Ensure this network is using the correct driver for optimal configuration
+    # Ensure this network is configured correctly for optimal performance
