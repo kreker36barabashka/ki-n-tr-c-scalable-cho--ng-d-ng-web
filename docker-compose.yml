@@ -25,3 +25,4 @@ networks:
     driver: bridge  # Use bridge network driver to enable communication between services
     # This network allows services to communicate with each other using the specified aliases
     # Ensure this network is configured correctly for optimal performance
+    # Consider monitoring network usage to identify bottlenecks
