@@ -24,3 +24,4 @@ networks:
   app-network:
     driver: bridge  # Use bridge network driver to enable communication between services
     # This network allows services to communicate with each other using the specified aliases
+    # Ensure this network is using the correct driver for optimal configuration
