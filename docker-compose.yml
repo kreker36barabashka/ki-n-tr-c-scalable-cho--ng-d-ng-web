@@ -1,21 +1,21 @@
 version: '3.8'
 services:
   web:
-    build: ./web
+    build: ./web  # Build the web service from the Dockerfile in the 'web' directory
     ports:
-      - '3000:3000'
+      - '3000:3000'  # Map port 3000 on the host to port 3000 on the web service
     depends_on:
-      - mongo
+      - mongo  # Ensure mongo service is started before web service
     networks:
       - app-network
 
   mongo:
-    image: mongo
+    image: mongo  # Use the official MongoDB image
     ports:
-      - '27017:27017'
+      - '27017:27017'  # Map port 27017 on the host to port 27017 on the mongo service
     networks:
       - app-network
 
 networks:
   app-network:
-    driver: bridge
+    driver: bridge  # Use bridge network driver
